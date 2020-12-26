@@ -12,7 +12,9 @@
     </div>
     <div class="row justify-content-center align-items-center h-25">
       <div class="col">
-        <button type="button" class="btn btn-dark btn-lg">Large button</button>
+        <router-link to="/createpost" style="text-decoration: none">
+          <button type="button" class="btn btn-dark btn-lg">Vent</button>
+        </router-link>
       </div>
     </div>
 
