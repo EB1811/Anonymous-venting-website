@@ -11,10 +11,6 @@
             <label class="form-label">Rant Text</label>
             <textarea class="form-control" rows="8" required v-model="text"></textarea>
           </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" v-model="isCommentsAllowed">
-            <label class="form-check-label">Allow comments</label>
-          </div>
           <div style="text-align: center">
             <button type="button" class="btn btn-primary me-2" v-on:click="goHome">Home</button>
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -32,8 +28,7 @@ export default {
   data() {
     return {
       title: '',
-      text: '',
-      isCommentsAllowed: false
+      text: ''
     }
   },
   methods: {
