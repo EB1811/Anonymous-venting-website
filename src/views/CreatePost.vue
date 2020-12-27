@@ -16,6 +16,7 @@
             <label class="form-check-label">Allow comments</label>
           </div>
           <div style="text-align: center">
+            <button type="button" class="btn btn-primary me-2" v-on:click="goHome">Home</button>
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>
@@ -25,6 +26,8 @@
 </template>
 
 <script>
+import createPost from '../composables/createPost'
+
 export default {
   data() {
     return {
@@ -35,8 +38,14 @@ export default {
   },
   methods: {
     handleSubmit() {
+      if(this.title && this.text) {
+        createPost(this.title, this.text)
 
-      console.log(this.title + this.text + this.isCommentsAllowed)
+        this.$router.push({name: 'Home'})
+      }
+    },
+    goHome() {
+      this.$router.push({name: 'Home'})
     }
   }
 }

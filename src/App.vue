@@ -8,6 +8,8 @@ import 'firebase/firestore';
 import firebaseConfig from './firebaseConfig'
 const db = firebase.firestore();
 
+import 'bootstrap/dist/css/bootstrap.css'
+
 export default {
   
 }
