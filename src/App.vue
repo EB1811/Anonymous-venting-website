@@ -2,6 +2,17 @@
   <router-view/>
 </template>
 
+<script>
+import firebase from "firebase/app";
+import 'firebase/firestore';
+import firebaseConfig from './firebaseConfig'
+const db = firebase.firestore();
+
+export default {
+  
+}
+</script>
+
 <style>
 html, body {
   height: 100%;
