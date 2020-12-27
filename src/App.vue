@@ -12,6 +12,8 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fff;
+  background: rgb(46,46,46);
+  background: linear-gradient(120deg, rgba(46,46,46,1) 0%, rgba(7,9,23,1) 100%);
 }
 </style>
