@@ -10,7 +10,8 @@ const createPost = (title, content) => {
         console.log("Document successfully written!");
     })
     .catch((error) => {
-        console.error("Error writing document: ", error);
+       //// console.error("Error writing document: ", error);
+       console.log("DEMO website: rants are not being added to the database");
     })
 }
 
