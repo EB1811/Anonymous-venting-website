@@ -11,11 +11,13 @@ const getPosts = () => {
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            posts.value.push({
-                id: doc.id,
-                title: doc.data().title,
-                content: doc.data().content,
-            });
+            if(posts.value.length < 100) {
+                posts.value.push({
+                    id: doc.id,
+                    title: doc.data().title,
+                    content: doc.data().content,
+                });
+            }
         });
     })
     .catch((error) => {

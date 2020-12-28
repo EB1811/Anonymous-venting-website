@@ -18,6 +18,7 @@ export default {
     props: ['title', 'content'],
     methods: {
         closeHighlight() {
+            //* Emits can be caught by @emitname=""
             this.$emit('close')
         }
     }
