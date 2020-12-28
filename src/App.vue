@@ -8,6 +8,9 @@ import 'firebase/firestore';
 import firebaseConfig from './firebaseConfig'
 const db = firebase.firestore();
 
+//TODO End rant content with greater than ~100 words with a '...' in home page.
+//TODO Host on firebase.
+
 export default {
   
 }
