@@ -10,7 +10,7 @@
         </h5>
       </div>
     </div>
-    <div class="row justify-content-center align-items-center" style="margin: 100px 0">
+    <div class="row justify-content-center align-items-center" style="margin: 125px 0">
       <div class="col">
         <router-link to="/createpost" style="text-decoration: none">
           <button type="button" class="btn btn-dark btn-lg">Vent</button>
@@ -20,29 +20,54 @@
 
     <div class="row m-2">
       <div class="col-xs-12 col-md-4" v-for="post in posts" :key="post.id">
-        <div class="card text-white bg-dark mt-5">
+        <div class="card text-white bg-dark mt-5" style="cursor: pointer" @click="toggleHightlight(post.title, post.content)">
           <div class="card-body">
-            <h2 class="card-title">{{post.title}}</h2>
+            <h2 class="card-title mb-4">{{post.title}}</h2>
             <p class="card-text">{{post.content}}</p>
           </div>
         </div>
       </div>
+    </div>
+
+    <div v-if="showHighlight">
+      <Highlight :title="highlightTitle" :content="highlightContent" @close="toggleHightlight"/>
     </div>
   </div>
 </template>
 
 <script>
 import getPosts from '../composables/getPosts'
+import Highlight from '../components/Highlight'
 
 export default {
   name: 'Home',
+  components: { Highlight },
 
+  data() {
+    return {
+      showHighlight: false,
+      highlightTitle: "",
+      highlightContent: ""
+    }
+  },
+  methods: {
+    toggleHightlight(title, content) {
+      this.highlightTitle = title
+      this.highlightContent = content
+
+      this.showHighlight = !this.showHighlight
+    }
+  },
+
+  // On Start
   setup() {
     const { posts } = getPosts()
-
-    console.log(posts.value)
+    //// console.log(posts.value)
 
     return { posts }
   }
 }
 </script>
+
+<style>
+</style>
