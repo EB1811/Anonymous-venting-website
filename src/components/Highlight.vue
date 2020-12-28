@@ -5,7 +5,7 @@
                 <div class="card text-white bg-dark">
                     <div class="card-body">
                     <h2 class="card-title mb-4" style="color: #95ff00">{{title}}</h2>
-                    <p class="card-text">{{content}}</p>
+                    <p class="card-text p-3" style="border-top: 2px solid #95ff00">{{content}}</p>
                     </div>
                 </div>
             </div>
