@@ -8,19 +8,18 @@ import 'firebase/firestore';
 import firebaseConfig from './firebaseConfig'
 const db = firebase.firestore();
 
-import 'bootstrap/dist/css/bootstrap.css'
-
 export default {
   
 }
 </script>
 
-<style>
+<style lang="scss">
+@import './scss/customBootstrap.scss';
+
 html, body {
   height: 100vh;
   margin: 0;
-  background: rgb(46,46,46);
-  background: linear-gradient(120deg, rgba(46,46,46,1) 0%, rgba(7,9,23,1) 100%);
+  background: #242424;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -28,7 +27,6 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  background: rgb(46,46,46);
-  background: linear-gradient(120deg, rgba(46,46,46,1) 0%, rgba(7,9,23,1) 100%);
+  background: #242424;
 }
 </style>

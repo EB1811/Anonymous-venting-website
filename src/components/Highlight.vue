@@ -1,10 +1,10 @@
 <template>
     <div class="backdrop" >
         <div class="row h-100 align-items-center justify-content-center" @click.self="closeHighlight" style="cursor: pointer">
-            <div class="col-3" style="cursor: auto">
+            <div class="col-xs-12 col-md-3" style="cursor: auto">
                 <div class="card text-white bg-dark">
                     <div class="card-body">
-                    <h2 class="card-title mb-4">{{title}}</h2>
+                    <h2 class="card-title mb-4" style="color: #95ff00">{{title}}</h2>
                     <p class="card-text">{{content}}</p>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ export default {
 .backdrop {
     top: 0;
     position: fixed;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(20, 20, 20, 0.5);
     width: 100%;
     height: 100%;
 }
