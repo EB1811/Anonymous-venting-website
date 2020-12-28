@@ -5,8 +5,12 @@ $theme-colors: (
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
-/* remove rounding from cards, buttons */
+
 .btn { border-radius: 0; }
+.card { border: none }
+.card:hover {
+    box-shadow: 0px 0px 0px 0.75px #0f0f0f;
+}
 
 $mynewcolor:#95ff00;
 

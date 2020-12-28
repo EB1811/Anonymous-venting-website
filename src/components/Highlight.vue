@@ -1,6 +1,6 @@
 <template>
-    <div class="backdrop" >
-        <div class="row h-100 align-items-center justify-content-center" @click.self="closeHighlight" style="cursor: pointer">
+    <div class="backdrop">
+        <div class="row h-100 align-items-center justify-content-center" @click.self="closeHighlight" style="cursor: pointer; margin: 0">
             <div class="col-xs-12 col-md-3" style="cursor: auto">
                 <div class="card text-white bg-dark">
                     <div class="card-body">
@@ -27,9 +27,11 @@ export default {
 
 <style>
 .backdrop {
+    margin: 0;
     top: 0;
+    left: 0;
     position: fixed;
-    background: rgba(20, 20, 20, 0.5);
+    background: rgba(20, 20, 20, 0.658);
     width: 100%;
     height: 100%;
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row p-4">
-      <h1 class="display-1" style="font-weight: 500; color: #95ff00">The Void</h1>
+      <h1 class="display-1" style="font-weight: 500; color: #95ff00; margin-top: 100px">The Void</h1>
     </div>
     <div class="row m-5 justify-content-center">
       <div class="col-xs-12 col-md-8">
@@ -18,9 +18,9 @@
       </div>
     </div>
 
-    <div class="row m-2">
-      <div class="col-xs-12 col-md-4 mt-4" v-for="post in posts" :key="post.id">
-        <div class="card text-white bg-dark mt-5 h-100" style="cursor: pointer" @click="toggleHightlight(post.title, post.content)">
+    <div class="row" style="margin-top: 15%; border-top: 3px solid #95ff00">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-xxl-3 mt-4" v-for="post in posts" :key="post.id">
+        <div class="card text-white bg-dark h-100" style="cursor: pointer;" @click="toggleHightlight(post.title, post.content)">
           <div class="card-body">
             <h2 class="card-title mb-4" style="color: #95ff00">{{post.title}}</h2>
             <p class="card-text" >{{post.content}}</p>
